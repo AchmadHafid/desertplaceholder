@@ -1,14 +1,33 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
-  compileSdkVersion rootProject.ext.compileSdkVersion
-  buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion compile_sdk_version
+    defaultConfig {
+        minSdkVersion min_sdk_version
+    }
+    dexOptions {
+        javaMaxHeapSize java_max_heap_size
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        warningsAsErrors true
+    }
+}
 
-  defaultConfig {
-    minSdkVersion 18
-  }
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = jvm_target
+        allWarningsAsErrors = true
+    }
 }
 
 dependencies {
-  compile "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$app_compat_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
 }
