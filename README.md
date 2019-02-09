@@ -1,7 +1,7 @@
 DesertPlaceholder
 =================
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-DesertPlaceholder-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5065)
+[![Release](https://jitpack.io/v/AchmadHafid/desertplaceholder.svg)](https://jitpack.io/#AchmadHafid/desertplaceholder)
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
 
 Animated placeholder in desert style
@@ -18,11 +18,21 @@ This library is compatible from API 21 (Android 5.0 Lollipop) & AndroidX.
 Download
 --------
 
+Add it in your root build.gradle at the end of repositories:
+
+```groovy
+allprojects {
+    repositories {
+	    maven { url 'https://jitpack.io' }
+	}
+}
+```
+
 Add the dependency
 
 ```groovy
 dependencies {
-    compile 'com.github.jetradarmobile.desertplaceholder:desertplaceholder:1.2.4'
+    implementation 'com.github.AchmadHafid:desertplaceholder:2.0.0'
 }
 ```
 
