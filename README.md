@@ -18,17 +18,6 @@ This library is compatible from API 21 (Android 5.0 Lollipop) & AndroidX.
 Download
 --------
 
-Add it in your root build.gradle at the end of repositories:
-
-```groovy
-allprojects {
-    repositories {
-        ...
-        maven { url "https://jitpack.io" }
-    }
-}
-```
-
 Add the dependency
 
 ```groovy
@@ -55,10 +44,10 @@ Add view to your layout
 Set up listener to button click
 
 ``` kotlin
-    findViewById<DesertPlaceholder>(R.id.placeholder)
-            .setOnButtonClickListener(View.OnClickListener {
-                // do something
-            })
+findViewById<DesertPlaceholder>(R.id.placeholder)
+    .setOnButtonClickListener(View.OnClickListener {
+        // do something
+    })
 ```
 
 
