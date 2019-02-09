@@ -2,10 +2,7 @@ DesertPlaceholder
 =================
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-DesertPlaceholder-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5065)
-[![JitPack](https://jitpack.io/v/JetradarMobile/DesertPlaceholder.svg)](https://jitpack.io/#JetradarMobile/DesertPlaceholder)
-[![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
-[![AndroidWeekly](https://img.shields.io/badge/Android%20Weekly-%23240-blue.svg?style=flat)](http://androidweekly.net/issues/issue-240)
-[![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-%23126-blue.svg?style=flat)](https://www.androiddevdigest.com/digest-126/)
+[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
 
 Animated placeholder in desert style
 
@@ -15,7 +12,7 @@ Animated placeholder in desert style
 Compatibility
 -------------
 
-This library is compatible from API 14 (Android 4.0).
+This library is compatible from API 21 (Android 5.0 Lollipop) & AndroidX.
 
 
 Download
@@ -57,36 +54,11 @@ Add view to your layout
 
 Set up listener to button click
 
-``` java
-   DesertPlaceholder desertPlaceholder = (DesertPlaceholder) findViewById(R.id.placeholder);
-    desertPlaceholder.setOnButtonClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        // do stuff
-      }
-    });
-```
-
-
-Testing
--------
-
-``` java
-  @Rule
-  public final ActivityTestRule<MainActivity> activityRule  = new ActivityTestRule<MainActivity>(MainActivity.class) {
-    @Override
-    protected void beforeActivityLaunched() {
-      //...
-      DesertPlaceholder.animationEnabled = false;
-    }
-  };
-
-  @Test
-  public void placeholder() {
-    onView(withId(R.id.placeholder))
-        .perform(click()) // will freeze here if animation enabled
-        .check(matches(isDisplayed()));
-  }
+``` kotlin
+    findViewById<DesertPlaceholder>(R.id.placeholder)
+            .setOnButtonClickListener(View.OnClickListener {
+                // do something
+            })
 ```
 
 
