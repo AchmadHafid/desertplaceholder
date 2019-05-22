@@ -54,10 +54,9 @@ Add view to your layout
 Set up listener to button click
 
 ``` kotlin
-findViewById<DesertPlaceholder>(R.id.placeholder)
-    .setOnButtonClickListener(View.OnClickListener {
-        // do something
-    })
+desertPlaceHolderAction(R.id.placeholder) {
+    // do something
+}
 ```
 
 
