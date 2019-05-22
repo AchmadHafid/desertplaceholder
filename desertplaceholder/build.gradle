@@ -11,7 +11,7 @@ android {
         minSdkVersion min_sdk_version
     }
     dexOptions {
-        javaMaxHeapSize java_max_heap_size
+        javaMaxHeapSize '4g'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -24,7 +24,7 @@ android {
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     kotlinOptions {
-        jvmTarget = jvm_target
+        jvmTarget = '1.8'
         allWarningsAsErrors = true
     }
 }

@@ -17,25 +17,21 @@
 package com.jetradar.desertplaceholder.sample
 
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.jetradar.desertplaceholder.DesertPlaceholder
+import com.jetradar.desertplaceholder.desertPlaceHolderAction
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        findViewById<DesertPlaceholder>(R.id.placeholder)
-            .setOnButtonClickListener(View.OnClickListener {
-                Toast.makeText(
-                    this@MainActivity,
-                    "Button clicked",
-                    Toast.LENGTH_SHORT
-                ).show()
-            })
+        desertPlaceHolderAction(R.id.placeholder) {
+            Toast.makeText(
+                this@MainActivity,
+                "Button clicked",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 
 }

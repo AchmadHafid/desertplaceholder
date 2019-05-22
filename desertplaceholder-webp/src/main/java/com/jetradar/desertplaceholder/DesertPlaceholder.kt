@@ -23,6 +23,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
+import androidx.annotation.IdRes
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
 class DesertPlaceholder : FrameLayout {
@@ -72,8 +74,8 @@ class DesertPlaceholder : FrameLayout {
         setBackgroundColor(ContextCompat.getColor(context, R.color.background_desert))
     }
 
-    fun setOnButtonClickListener(clickListener: View.OnClickListener) =
-        button.setOnClickListener(clickListener)
+    fun setOnButtonClickListener(callback: (v: View) -> Unit) =
+        button.setOnClickListener(callback)
 
     fun setMessage(msg: String?) {
         message.text = msg
@@ -94,4 +96,9 @@ class DesertPlaceholder : FrameLayout {
         const val animationEnabled = true
     }
 
+}
+
+fun AppCompatActivity.desertPlaceHolderAction(@IdRes id: Int, callback: (view: View) -> Unit) {
+    findViewById<DesertPlaceholder>(id)
+        .setOnButtonClickListener(callback)
 }
