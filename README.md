@@ -6,7 +6,7 @@ DesertPlaceholder
 
 Animated placeholder in desert style
 
-![image](https://github.com/JetradarMobile/DesertPlaceholder/blob/master/art/desertplaceholder.gif)
+![image](https://github.com/AchmadHafid/desertplaceholder/blob/master/art/desertplaceholder.gif)
 
 
 Compatibility
