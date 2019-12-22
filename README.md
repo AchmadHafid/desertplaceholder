@@ -32,7 +32,7 @@ Add the dependency
 
 ```groovy
 dependencies {
-    implementation 'com.github.AchmadHafid:desertplaceholder:2.1.0'
+    implementation 'com.github.AchmadHafid:desertplaceholder:2.1.1'
 }
 ```
 
